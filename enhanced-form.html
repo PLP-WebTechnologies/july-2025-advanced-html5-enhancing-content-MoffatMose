@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhanced HTML5 Content & Forms</title>
+</head>
+<body>
+  <header>
+    <h1>HTML5 Content & Form Showcase</h1>
+  </header>
+
+  <main>
+    <section id="content">
+      <h2>Organizing Information with Lists</h2>
+      <p>This page demonstrates:</p>
+      <ul>
+        <li>Clear use of <strong>lists</strong> for organization</li>
+        <li>Semantic <strong>tables</strong> for data</li>
+        <li>Embedded <strong>media</strong> for engagement</li>
+        <li>Accessible, validated HTML5 <strong>forms</strong></li>
+      </ul>
+      <ol>
+        <li>Review the content sections below.</li>
+        <li>Complete the registration form.</li>
+        <li>Enjoy the media gallery!</li>
+      </ol>
+    </section>
+
+    <section id="media">
+      <h2>Media Gallery</h2>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Nature landscape" width="300">
+        <figcaption>Beautiful Nature Landscape</figcaption>
+      </figure>
+      <figure>
+        <audio controls>
+          <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <figcaption>Some amazing audio</figcaption>
+      </figure>
+      <figure>
+        <video width="300" controls>
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+        <figcaption>Some amazing Video</figcaption>
+      </figure>
+    </section>
+
+    <section id="table">
+      <h2>Registered Attendees</h2>
+      <table border="1" cullspace =0>
+        <caption>Event Participants</caption>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>lorem sam</td>
+            <td>sam@example.com</td>
+            <td>Speaker</td>
+          </tr>
+          <tr>
+            <td>Bob Lee</td>
+            <td>bob.lee@example.com</td>
+            <td>Attendee</td>
+          </tr>
+          <tr>
+            <td>Carol Smith</td>
+            <td>carol.smith@example.com</td>
+            <td>Organizer</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="form">
+      <h2>Event Registration Form</h2>
+      <form action="#" method="post" autocomplete="on" aria-label="Event Registration Form">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="fullname">Full Name *</label>
+          <input type="text" id="fullname" name="fullname" required placeholder="e.g. Moffat mose" autocomplete="name">
+
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required placeholder="moffat@gmail.com" autocomplete="email">
+
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" min="1900-01-01" max="2005-12-31" autocomplete="bday">
+
+          <label for="country">Country *</label>
+          <select id="country" name="country" required>
+            <option value="" disabled selected>Select your country</option>
+            <option value="Kenya">Kenya</option>
+            <option value="United States">United States</option>
+            <option value="India">India</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Other">Other</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Account Details</legend>
+          <label for="username">Username *</label>
+          <input type="text" id="username" name="username" required minlength="4" maxlength="15" placeholder="Choose a username" autocomplete="username">
+
+          <label for="password">Password *</label>
+          <input type="password" id="password" name="password" required minlength="10" autocomplete="new-password"
+            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+            title="Password must be at least 10 characters and include a number.">
+
+          <label for="confirm-password">Confirm Password *</label>
+          <input type="password" id="confirm-password" name="confirm-password" required minlength="8" autocomplete="new-password">
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+          <span>Role:</span>
+          <input type="radio" id="role-attendee" name="role" value="Attendee" checked>
+          <label for="role-attendee">Attendee</label>
+          <input type="radio" id="role-speaker" name="role" value="Speaker">
+          <label for="role-speaker">Speaker</label>
+          <input type="radio" id="role-organizer" name="role" value="Organizer">
+          <label for="role-organizer">Organizer</label>
+          <br>
+          <input type="checkbox" id="newsletter" name="newsletter" checked>
+          <label for="newsletter">Subscribe to event newsletter</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Comments</legend>
+          <label for="comments">Comments or Questions</label>
+          <textarea id="comments" name="comments" rows="4" maxlength="300" placeholder="Enter any comments here"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Referral Code</legend>
+          <label for="refcode">Referral Code (Read-only)</label>
+          <input type="text" id="refcode" name="refcode" value="EVT2025" readonly>
+        </fieldset>
+
+        <button type="submit">Register</button>
+        <button type="reset">Reset</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Moffat Mose. All rights reserved.</p>
+  </footer>
+</body>
+</html>
